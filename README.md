@@ -1,4 +1,4 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pangolin-do-golang_tech-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pangolin-do-golang_tech-challenge) ![Known Vulnerabilities](https://snyk.io/test/github/pcbarretos/pangolin-do-golang/tech-challenge/badge.svg)
+ ![Known Vulnerabilities](https://snyk.io/test/github/pcbarretos/pangolin-do-golang/tech-challenge/badge.svg)
 
 Miro Board: https://miro.com/app/board/uXjVKVoZwos=/?share_link_id=718027124865
 
@@ -106,31 +106,6 @@ Follow the steps described in the [official documentation](https://github.com/sw
 ### Access the documentation
 
 The documentation can be founded at the path `/docs/swagger.yaml` or accessing this [link](./docs/swagger.yaml).
-
-## Infrastructure
-
-[Requirements Infrastructure](https://github.com/pangolin-do-golang/tech-challenge/blob/main/terraform/README.md)
-
-## Kubernetes
-
-The Kubernetes templates are located at the `/deploy/k8s` folder, you can use it to create a local k8s setup with minikube
-
-The order of execution is:
-1. namespaces
-2. secret > you should update the secret value with the database password
-3. deployment
-4. hpa
-5. service
-
-You can forward the port with the following command:
-
-```bash
-kubectl port-forward svc/tech-challenge-service 4000:80 -n dev
-```
-
-### Kubernates Architecture
-
-![Diagram](deploy/diagram/kubernates-diagram.png)
 
 ## Project structure
 
